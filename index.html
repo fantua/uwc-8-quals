@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор для визначення ІМТ</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            App.init();
+        });
+    </script>
+</head>
+<body>
+<div>
+    <h2>Вхідні параметри:</h2>
+    <div class="group">
+        <form id="input-form">
+            <div class="input-group">
+                <div class="label"><label for="height">Зріст:</label></div>
+                <div class="input"><input type="number" min="0" id="height" name="height" required> см</div>
+            </div>
+            <div class="input-group">
+                <div class="label"><label for="weight">Вага:</label></div>
+                <div class="input"><input type="number" min="0" id="weight" name="weight" required> кг</label></div>
+            </div>
+            <div class="input-group">
+                <div class="button"><button>Визначити</button></div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="result-block" style="display: none;">
+    <h2>Результат:</h2>
+    <p>Ваш індекс маси тіла: <span class="index" id="result-index"></span></p>
+    <table id="result-table" class="result">
+        <tr>
+            <th>Індекс маси тіла</th>
+            <th>Класифікація</th>
+        </tr>
+        <tr data-max="18.49">
+            <td class="center">менше 18,5</td>
+            <td>Недостатня маса</td>
+        </tr>
+        <tr data-min="18.5" data-max="24.9">
+            <td class="center">18,5—24,9</td>
+            <td>Норма</td>
+        </tr>
+        <tr data-min="25" data-max="29.9">
+            <td class="center">25,0—29,9</td>
+            <td>Передожиріння (гладкість)</td>
+        </tr>
+        <tr data-min="30" data-max="34.9">
+            <td class="center">30,0—34,9</td>
+            <td>Ожиріння I ступеня</td>
+        </tr>
+        <tr data-min="35" data-max="39.9">
+            <td class="center">35,0—39,9</td>
+            <td>Ожиріння II ступеня</td>
+        </tr>
+        <tr data-min="40">
+            <td class="center">більше 40,0</td>
+            <td>Ожиріння III ступеня</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

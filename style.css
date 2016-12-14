@@ -1,0 +1,55 @@
+div.input-group {
+    margin: 10px 0;
+}
+
+.input-group div.label {
+    display: inline-block;
+    width: 50px;
+}
+
+.input-group div.input {
+    display: inline-block;
+}
+
+.input-group div.button {
+}
+
+span.index {
+    font-weight: bold;
+}
+
+table.result {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.result tr {
+}
+
+.result th {
+    border: 1px solid #000;
+    background-color: #808080;
+    height: 40px;
+    width: 200px;
+    padding: 10px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.result td {
+    height: 40px;
+    width: 200px;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+.result td.center {
+    text-align: center;
+}
+
+.result tr.selected {
+    background-color: #d3d3d3;
+}
+
+
+
